@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "display": "flex",
+      },
+      {
+        "flexDirection": "row",
+      },
+      {
+        "width": "100%",
+      },
+      {
+        "justifyContent": "space-between",
+      },
+      {
+        "height": 100,
+      },
+      {
+        "alignItems": "center",
+      },
+      {
+        "marginBottom": 16,
+      },
+      {
+        "borderBottomLeftRadius": 8,
+        "borderBottomRightRadius": 8,
+        "borderTopLeftRadius": 8,
+        "borderTopRightRadius": 8,
+      },
+    ]
+  }
+>
+  <Image
+    source={
+      {
+        "uri": "https://s3-eu-west-1.amazonaws.com/api.themeshplatform.com/media/7e386191b2ee40b290886a05d3e10e24_nike-air-relentless-a.jpg",
+      }
+    }
+    style={
+      [
+        {
+          "width": 75,
+        },
+        {
+          "height": 75,
+        },
+        {
+          "borderBottomLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderTopRightRadius": 8,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      [
+        {
+          "overflow": "hidden",
+        },
+        {
+          "width": 175,
+        },
+        {
+          "marginLeft": 10,
+        },
+        {
+          "marginRight": 10,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#fff",
+          },
+          {
+            "fontWeight": "700",
+          },
+        ]
+      }
+    >
+      Nike Air Relentless 4 Mens Running Shoes
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "color": "#fff",
+          },
+        ]
+      }
+    >
+      Size: 8
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "color": "#ff8626",
+          },
+          {
+            "fontWeight": "700",
+          },
+        ]
+      }
+    >
+      GBP 45.00 * 1
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "backgroundColor": "#ef4444",
+        "borderBottomLeftRadius": 8,
+        "borderBottomRightRadius": 8,
+        "borderTopLeftRadius": 8,
+        "borderTopRightRadius": 8,
+        "opacity": 1,
+        "paddingBottom": 8,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+        "paddingTop": 8,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#fff",
+          },
+          {
+            "fontWeight": "700",
+          },
+        ]
+      }
+    >
+      Delete
+    </Text>
+  </View>
+</View>
+`;

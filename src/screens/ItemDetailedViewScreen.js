@@ -68,7 +68,7 @@ const ItemDetailedViewScreen = ({ route }) => {
           </Text>
           <SizeSelector
             selectedSize={selectedSize}
-            product={product}
+            sizes={product.sizes}
             onPressSize={(size) => setSelectedSize(size)}
           />
         </View>

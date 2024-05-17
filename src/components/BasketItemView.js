@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 
-const CartItemView = ({
+const BasketItemView = ({
   product,
   quantity,
   size,
@@ -37,4 +37,4 @@ const CartItemView = ({
   );
 }
 
-export default CartItemView;
+export default BasketItemView;

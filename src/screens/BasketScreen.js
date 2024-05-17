@@ -2,8 +2,7 @@ import React from 'react';
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import CheckoutBottomBar from '../components/CheckoutBottomBar';
 import { useGetBasketItems, useDeleteFromBasket, useClearbasket } from '../hooks/useBucket';
-import CartItemView from '../components/CartItemView';
-import { totalWithCurrency } from '../commonFunctions';
+import BasketItemView from '../components/BasketItemView';
 
 const BasketScreen = () => {
 
@@ -29,7 +28,7 @@ const BasketScreen = () => {
           extraData={basketItems}
           keyExtractor={(item, index) => index.toString()}
           renderItem={({ item }) => (
-            <CartItemView
+            <BasketItemView
               product={item.product}
               quantity={item.quantity}
               size={item.size}
