@@ -3,14 +3,14 @@
 ## Step 1: Install node modules
 yarn install
 
-## Step 1: To install pods
+## Step 2: To install pods
 cd ios
 pod install
 
-## Step : Start the Metro Server
+## Step 3: Start the Metro Server
 yarn start
 
-## Step : Start your Application
+## Step 4: Start your Application
 
 ### For Android
 yarn android
