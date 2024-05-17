@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
-import { totalWithCurrency } from '../commonFunctions';
+import { totalWithCurrency } from '../common/commonFunctions';
 
 const CheckoutBottomBar = ({
   basketItems,
