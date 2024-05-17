@@ -17,9 +17,9 @@ const BasketScreen = () => {
           className="mt-6 mb-10 text-4xl text-white self-start font-bold">
           Your Basket
         </Text>
-        <TouchableOpacity onPress={()=> clearProductsBasket()}>
+        {basketItems.length > 0 && <TouchableOpacity onPress={()=> clearProductsBasket()}>
           <Text className={"text-secondary text-1xl rounded-lg font-bold "}>Clear Basket</Text>
-        </TouchableOpacity>
+        </TouchableOpacity>}
       </View>
       <View>
         <FlatList
@@ -35,13 +35,18 @@ const BasketScreen = () => {
               onPressDelete={() => deleteProductsFromBasket(item.product, item.size)}
             />
           )}
+          ListEmptyComponent={
+            <Text className={"text-white text-1xl text-center mt-20"}>
+              Your basket is empty
+            </Text>
+          }
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
         />
       </View>
-      <CheckoutBottomBar
+      {basketItems.length > 0 && <CheckoutBottomBar
         basketItems={basketItems}
-      />
+      />}
     </View>
   );
 }
