@@ -32,9 +32,9 @@ Component-Based Architecture
 ## Screenshots
 
 <p align="center">
-  <img src="/screenShots/SS1.png" width="350" title="Home Screen">
-  <img src="/screenShots/SS2.png" width="350" title="Detailed View Screen">
-  <img src="/screenShots/SS3.png" width="350" title="Basket Screen">
+  <img src="/screenShots/SS1.png" width="150" title="Home Screen">
+  <img src="/screenShots/SS2.png" width="150" title="Detailed View Screen">
+  <img src="/screenShots/SS3.png" width="150" title="Basket Screen">
 </p>
 
 
