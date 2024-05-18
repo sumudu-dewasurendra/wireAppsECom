@@ -47,7 +47,18 @@ exports[`renders correctly 1`] = `
       ]
     }
   >
-    Total: 90 GBP
+    Total: 
+    <Text
+      style={
+        [
+          {
+            "color": "#ff8626",
+          },
+        ]
+      }
+    >
+      90 GBP
+    </Text>
   </Text>
   <View
     accessibilityState={
@@ -69,7 +80,7 @@ exports[`renders correctly 1`] = `
     }
     accessible={true}
     collapsable={false}
-    focusable={true}
+    focusable={false}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}

@@ -56,6 +56,7 @@ const BasketScreen = () => {
       </View>
       {basketItems.length > 0 && <MemorizedCheckoutBottomBar
         total={totalWithCurrency(basketItems)}
+        onPress={() => {}} // TODO: navigate to checkout screen
       />}
     </View>
   );

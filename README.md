@@ -15,6 +15,7 @@ This e-commerce app provides a hassle-free shopping environment. Browsing a list
 - View list of product items
 - Detailed view of one item
 - Add or remove items from basket
+- Search product by brand name
 
 
 ## Architecture and design
@@ -30,7 +31,11 @@ Component-Based Architecture
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<p align="center">
+  <img src="/screenShots/SS1.png" width="350" title="Home Screen">
+  <img src="/screenShots/SS2.png" width="350" title="Detailed View Screen">
+  <img src="/screenShots/SS3.png" width="350" title="Basket Screen">
+</p>
 
 
 ## Run Locally
