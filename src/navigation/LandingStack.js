@@ -1,4 +1,4 @@
-import NotificationDot from '../components/NotificationDot';
+import NotificationDot from '../components/compositeComponents/NotificationDot';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeStack from './HomeStack';
 import BasketScreen from '../screens/BasketScreen';

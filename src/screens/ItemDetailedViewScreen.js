@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
-import SizeSelector from '../components/SizeSelector';
-import QuantitySelector from '../components/QuantitySelector';
-import ProductMainDetailView from '../components/ProductMainDetailView';
+import SizeSelector from '../components/compositeComponents/SizeSelector';
+import QuantitySelector from '../components/compositeComponents/QuantitySelector';
+import ProductMainDetailView from '../components/compositeComponents/ProductMainDetailView';
 import { useNavigation } from '@react-navigation/native';
 import { useAddToBasket } from '../hooks/useBucket';
 
@@ -74,7 +74,7 @@ const ItemDetailedViewScreen = ({ route }) => {
         increaseOnPress={() => increaseQuantity()}
       />
       </View>
-      <View className={"flex-row items-center"}>
+      <View className={"items-center"}>
       <TouchableOpacity
         disabled={!selectedSize || quantity === 0}
         onPress={() => addToBasket()}

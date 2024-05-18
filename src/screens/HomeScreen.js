@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { View, Text, TextInput, FlatList } from 'react-native';
-import ItemView from '../components/ItemView';
+import ItemView from '../components/compositeComponents/ItemView';
 import { useNavigation } from '@react-navigation/native';
 import { useGetAllProductsQuery } from '../reducers/api/productsAPI';
 

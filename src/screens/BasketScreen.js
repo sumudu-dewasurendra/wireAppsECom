@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
-import CheckoutBottomBar from '../components/CheckoutBottomBar';
-import BasketItemView from '../components/BasketItemView';
+import CheckoutBottomBar from '../components/compositeComponents/CheckoutBottomBar';
+import BasketItemView from '../components/compositeComponents/BasketItemView';
 import { useGetBasketItems, useDeleteFromBasket, useClearbasket } from '../hooks/useBucket';
 
 const BasketScreen = () => {
