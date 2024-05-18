@@ -15,6 +15,9 @@ const ItemDetailedViewScreen = ({ route }) => {
   const [selectedSize, setSelectedSize] = useState(null)
   const [quantity, setQuantity] = useState(0)
 
+  const MemorizedSizeSelector = React.memo(SizeSelector)
+  const MemorizedQuantitySelector = React.memo(QuantitySelector)
+
   function increaseQuantity() {
     setQuantity(quantity + 1)
   }
@@ -66,13 +69,13 @@ const ItemDetailedViewScreen = ({ route }) => {
           <Text className={"text-white text-1xl mb-2"}>
             Select Size:
           </Text>
-          <SizeSelector
+          <MemorizedSizeSelector
             selectedSize={selectedSize}
             sizes={product.sizes}
             onPressSize={(size) => setSelectedSize(size)}
           />
         </View>
-      <QuantitySelector
+      <MemorizedQuantitySelector
         quantity={quantity}
         decreaseOnPress={() => decreaseQuantity()}
         increaseOnPress={() => increaseQuantity()}

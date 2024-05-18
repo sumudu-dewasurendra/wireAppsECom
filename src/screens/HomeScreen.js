@@ -13,6 +13,8 @@ const HomeScreen = () => {
 
     const navigation = useNavigation();
 
+    const MemorizedItemView = React.memo(ItemView)
+
     useEffect(() => {
         if (searchText === '') {
             setProducts(data?.data || [])
@@ -50,7 +52,7 @@ const HomeScreen = () => {
             extraData={products || []}
             keyExtractor={(item, index) => index.toString()}
             renderItem={({ item }) => 
-                <ItemView
+                <MemorizedItemView
                     product={item}
                     onPress={() => navigateToItemDetailedView(item)}
                 />}

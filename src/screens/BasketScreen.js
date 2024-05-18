@@ -1,14 +1,17 @@
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import CheckoutBottomBar from '../components/CheckoutBottomBar';
-import { useGetBasketItems, useDeleteFromBasket, useClearbasket } from '../hooks/useBucket';
 import BasketItemView from '../components/BasketItemView';
+import { useGetBasketItems, useDeleteFromBasket, useClearbasket } from '../hooks/useBucket';
 
 const BasketScreen = () => {
 
   const { basketItems } = useGetBasketItems();
   const { deleteProductsFromBasket } = useDeleteFromBasket(() => {});
   const { clearProductsBasket } = useClearbasket(() => {});
+
+  const MemorizedBasketItemView = React.memo(BasketItemView)
+  const MemorizedCheckoutBottomBar = React.memo(CheckoutBottomBar)
 
   return (
     <View className={"bg-primary flex h-full items-center pt-[80px] pl-4 pr-4"}>
@@ -28,7 +31,7 @@ const BasketScreen = () => {
           extraData={basketItems}
           keyExtractor={(item, index) => index.toString()}
           renderItem={({ item }) => (
-            <BasketItemView
+            <MemorizedBasketItemView
               product={item.product}
               quantity={item.quantity}
               size={item.size}
@@ -44,7 +47,7 @@ const BasketScreen = () => {
           showsVerticalScrollIndicator={false}
         />
       </View>
-      {basketItems.length > 0 && <CheckoutBottomBar
+      {basketItems.length > 0 && <MemorizedCheckoutBottomBar
         basketItems={basketItems}
       />}
     </View>
