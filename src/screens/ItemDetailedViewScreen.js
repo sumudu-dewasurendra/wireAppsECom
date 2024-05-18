@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import SizeSelector from '../components/SizeSelector';
 import QuantitySelector from '../components/QuantitySelector';
+import ProductMainDetailView from '../components/ProductMainDetailView';
 import { useNavigation } from '@react-navigation/native';
 import { useAddToBasket } from '../hooks/useBucket';
 
@@ -17,6 +18,7 @@ const ItemDetailedViewScreen = ({ route }) => {
 
   const MemorizedSizeSelector = React.memo(SizeSelector)
   const MemorizedQuantitySelector = React.memo(QuantitySelector)
+  const MemorizedProductMainDetailView = React.memo(ProductMainDetailView)
 
   function increaseQuantity() {
     setQuantity(quantity + 1)
@@ -46,24 +48,15 @@ const ItemDetailedViewScreen = ({ route }) => {
         className={"w-full h-[300px] rounded-lg mb-4"}
         source={{
           uri: product.mainImage,
-        }}/>
-      <View className={"self-start"}>
-        <Text className={"mb-2 text-white text-1xl"}>
-          {product.description}
-        </Text>
-        <Text className={"text-3xl text-white font-bold"}>
-          {product.brandName}
-        </Text>
-        <Text className={"text-1xl text-white"}>
-          {product.name}
-        </Text>
-        <Text className={"self-start text-white text-1xl"}>
-          {`Available Color: ${product.colour}`}
-        </Text>
-        <Text className={"text-2xl mb-2 text-secondary font-bold"}>
-          {`${product.price.amount} ${product.price.currency} `}
-        </Text>
-      </View>
+      }}/>
+      <MemorizedProductMainDetailView
+        description={product.description}
+        brandName={product.brandName}
+        name={product.name}
+        colour={product.colour}
+        amount={product.price.amount}
+        currency={product.price.currency}
+      />
       <View className={"flex w-full flex-row items-center justify-between"}>
         <View>
           <Text className={"text-white text-1xl mb-2"}>

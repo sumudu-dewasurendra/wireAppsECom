@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "marginBottom": 8,
+        },
+        {
+          "color": "#fff",
+        },
+      ]
+    }
+  >
+    Hit the tracks in these Nike Air Relentless 4 featuring flexible forefoot sole and Reslon midsole underfoot cushioning for superior comfort at each step. The ridged outsole ensures excellent traction while the cushioned ankle collar and the anatomically shaped insole guarantee great support for the whole foot. The mesh upper panels provide breathability and airflow within the shoe.
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 30,
+          "lineHeight": 36,
+        },
+        {
+          "color": "#fff",
+        },
+        {
+          "fontWeight": "700",
+        },
+      ]
+    }
+  >
+    Nike
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "color": "#fff",
+        },
+      ]
+    }
+  >
+    Nike Air Relentless 4 Mens Running Shoes
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "alignSelf": "flex-start",
+        },
+        {
+          "color": "#fff",
+        },
+      ]
+    }
+  >
+    Available Color: blue
+  </Text>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 24,
+          "lineHeight": 32,
+        },
+        {
+          "marginBottom": 8,
+        },
+        {
+          "color": "#ff8626",
+        },
+        {
+          "fontWeight": "700",
+        },
+      ]
+    }
+  >
+    45.00 GBP 
+  </Text>
+</View>
+`;
