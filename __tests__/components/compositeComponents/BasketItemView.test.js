@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import BasketItemView from '../../src/components/compositeComponents/BasketItemView';
-import { basketItems } from '../../testData/sampleData';
+import BasketItemView from '../../../src/components/compositeComponents/BasketItemView';
+import { basketItems } from '../../../testData/sampleData';
 
 const basketItem = basketItems[0];
 

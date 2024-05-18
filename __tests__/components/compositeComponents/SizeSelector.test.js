@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import SizeSelector from '../../src/components/compositeComponents/SizeSelector';
+import SizeSelector from '../../../src/components/compositeComponents/SizeSelector';
 
 test('renders correctly', () => {
     const tree = renderer.create(<SizeSelector

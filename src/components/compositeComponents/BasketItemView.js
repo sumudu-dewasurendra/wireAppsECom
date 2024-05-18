@@ -1,5 +1,7 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
+import Button from '../Button';
+import { BUTTON_TYPES } from '../../utils/types';
 
 const BasketItemView = ({
   product,
@@ -28,11 +30,13 @@ const BasketItemView = ({
                 {`${product.price?.currency} ${product.price?.amount} * ${quantity}`}
             </Text>
         </View>
-        <TouchableOpacity
-            className={"flex-1/3 bg-red-500 p-2 rounded-lg bg-red"}
-            onPress={onPressDelete}>
-            <Text className={"text-1xl text-white font-bold"}>Delete</Text>
-        </TouchableOpacity>
+        <Button
+            color={"red-500"}
+            textColor={"white"}
+            label={"Delete"}
+            type={BUTTON_TYPES.SOLID}
+            onPress={onPressDelete}
+        />
     </View>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ProductMainDetailView from '../../src/components/compositeComponents/ProductMainDetailView';
-import { productItems } from '../../testData/sampleData';
+import ProductMainDetailView from '../../../src/components/compositeComponents/ProductMainDetailView';
+import { productItems } from '../../../testData/sampleData';
 
 const product = productItems[0];
 

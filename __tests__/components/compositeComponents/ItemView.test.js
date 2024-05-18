@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ItemView from '../../src/components/compositeComponents/ItemView';
-import { productItems } from '../../testData/sampleData';
+import ItemView from '../../../src/components/compositeComponents/ItemView';
+import { productItems } from '../../../testData/sampleData';
 
 test('renders correctly', () => {
   const tree = renderer.create(<ItemView

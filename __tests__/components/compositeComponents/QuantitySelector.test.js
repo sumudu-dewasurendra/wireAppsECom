@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import QuantitySelector from '../../src/components/compositeComponents/QuantitySelector';
+import QuantitySelector from '../../../src/components/compositeComponents/QuantitySelector';
 
 test('renders correctly', () => {
   const tree = renderer.create(<QuantitySelector

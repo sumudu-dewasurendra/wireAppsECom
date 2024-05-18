@@ -54,7 +54,7 @@ exports[`renders correctly 1`] = `
       {
         "busy": undefined,
         "checked": undefined,
-        "disabled": undefined,
+        "disabled": false,
         "expanded": undefined,
         "selected": undefined,
       }
@@ -69,7 +69,7 @@ exports[`renders correctly 1`] = `
     }
     accessible={true}
     collapsable={false}
-    focusable={false}
+    focusable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -80,7 +80,6 @@ exports[`renders correctly 1`] = `
     style={
       {
         "alignItems": "center",
-        "backgroundColor": "#ff8626",
         "borderBottomLeftRadius": 8,
         "borderBottomRightRadius": 8,
         "borderTopLeftRadius": 8,

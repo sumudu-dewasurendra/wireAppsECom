@@ -3,8 +3,10 @@ import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import SizeSelector from '../components/compositeComponents/SizeSelector';
 import QuantitySelector from '../components/compositeComponents/QuantitySelector';
 import ProductMainDetailView from '../components/compositeComponents/ProductMainDetailView';
+import Button from '../components/Button';
 import { useNavigation } from '@react-navigation/native';
 import { useAddToBasket } from '../hooks/useBucket';
+import { BUTTON_TYPES } from '../utils/types';
 
 const ItemDetailedViewScreen = ({ route }) => {
 
@@ -19,6 +21,7 @@ const ItemDetailedViewScreen = ({ route }) => {
   const MemorizedSizeSelector = React.memo(SizeSelector)
   const MemorizedQuantitySelector = React.memo(QuantitySelector)
   const MemorizedProductMainDetailView = React.memo(ProductMainDetailView)
+  const MemorizedButton = React.memo(Button)
 
   function increaseQuantity() {
     setQuantity(quantity + 1)
@@ -39,11 +42,14 @@ const ItemDetailedViewScreen = ({ route }) => {
     <ScrollView
       contentContainerStyle={{alignItems: 'center'}}
       className={"bg-primary flex h-full pt-[50px] pl-4 pr-4"}>
-        <TouchableOpacity
-          className={"self-start mb-3"}
-          onPress={() => navigation.goBack()}>
-          <Text className={"text-secondary text-2xl font-bold"}>Back</Text>
-        </TouchableOpacity>
+        <View className={"self-start mb-3"}>
+          <MemorizedButton
+            textColor={"secondary"}
+            label={"BACK"}
+            type={BUTTON_TYPES.LABEL}
+            onPress={navigation.goBack}
+          />
+        </View>
       <Image
         className={"w-full h-[300px] rounded-lg mb-4"}
         source={{
@@ -75,14 +81,14 @@ const ItemDetailedViewScreen = ({ route }) => {
       />
       </View>
       <View className={"items-center"}>
-      <TouchableOpacity
-        disabled={!selectedSize || quantity === 0}
-        onPress={() => addToBasket()}
-        className={"bg-secondary rounded-lg mt-4 p-3 ml-3"}>
-        <Text className={"text-white text-1xl font-bold"}>
-          Add to Basket
-        </Text>
-      </TouchableOpacity>
+        <MemorizedButton
+          color={"secondary"}
+          textColor={"white"}
+          disabled={!selectedSize || quantity === 0}
+          onPress={addToBasket}
+          label={"Add to Basket"}
+          type={BUTTON_TYPES.SOLID}
+        />
       </View>
       <View className={"h-[100px]"}></View>
     </ScrollView>
