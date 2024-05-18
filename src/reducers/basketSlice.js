@@ -8,7 +8,7 @@ export const basketSlice = createSlice({
   name: "basket",
   initialState,
   reducers: {
-    addToBasket: (state, action) => {
+    addToBasket: (state, action) => { // Add product to basket by SKU and size
       const { product, size, quantity } = action.payload
       const productIndex = state.basketItems.findIndex(item => item.product.SKU === product.SKU && item.size === size)
         if (productIndex !== -1) {
@@ -18,10 +18,10 @@ export const basketSlice = createSlice({
         }
         state.basketItems = state.basketItems
     },
-    clearBasket: (state, action) => {
+    clearBasket: (state, action) => { // Clear basket
       state.basketItems = [];
     },
-    deleteFromBasket: (state, action) => {
+    deleteFromBasket: (state, action) => { // Delete product from basket by SKU and size
       const { product, size } = action.payload
       const productIndex = state.basketItems.findIndex(item => item.product.SKU === product.SKU && item.size === size)
       if (productIndex !== -1) {

@@ -31,7 +31,7 @@ const LandingStack = () => {
     return (
             <LandingTab.Navigator
                 screenOptions={({ route }) => ({
-                    tabBarIcon: () => {
+                    tabBarIcon: () => { // Display notification dot on basket tab
                         return route.name === 'Home' ? null : notificationCount > 0 ? <NotificationDot count={notificationCount} /> : null;
                     },
                     tabBarLabelStyle: tabBarLabelStyle,

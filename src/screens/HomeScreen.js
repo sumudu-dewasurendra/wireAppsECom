@@ -15,7 +15,7 @@ const HomeScreen = () => {
 
     const MemorizedItemView = React.memo(ItemView)
 
-    useEffect(() => {
+    useEffect(() => { // Search product by brand name
         if (searchText === '') {
             setProducts(data?.data || [])
             return
