@@ -26,7 +26,7 @@ Component-Based Architecture
 
 ## Tech Stack
 
-**Client:** React Native, Redux, TailwindCSS, React Navigation
+**React Native, Redux, TailwindCSS, React Navigation** 
 
 
 ## Screenshots
